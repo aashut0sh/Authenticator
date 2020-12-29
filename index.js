@@ -3,6 +3,9 @@ const express = require('express');
 const port = 8000;
 const app = express();
 const session = require('express-session');
+//for connecting to mongoDB
+const db= require('./config/mongoose');
+const cookieParser = require('cookie-parser');
 const passport= require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const flash= require('connect-flash');
@@ -12,9 +15,7 @@ const passportGoogle= require('./config/passport-google-auth');
 //for using mongo-store to solve auto session expire problem
 const MongoStore = require('connect-mongo')(session);
 app.use(express.urlencoded());
-//for connecting to mongoDB
-const db= require('./config/mongoose');
-const cookieParser = require('cookie-parser');
+
 
 //for setting up ejs
 app.set('view engine','ejs');

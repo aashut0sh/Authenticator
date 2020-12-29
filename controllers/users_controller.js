@@ -7,7 +7,7 @@ module.exports.signUp = function (req, res) {
         res.redirect('/users/profile');
     }
     res.render('signUp', {
-        title: "Authenticator Sign-Up"
+        title: "Web Test 1 Sign-Up"
     });
 }
 //for rendering signIn page
@@ -16,7 +16,7 @@ module.exports.signIn = function (req, res) {
         res.redirect('/users/profile');
     }
     res.render('signIn', {
-        title: "Authenticator Sign-In"
+        title: "Web Test 1 Sign-In"
     });
 }
 //for creating new user using signUp form
